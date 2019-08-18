@@ -1,0 +1,28 @@
+Dockerfile
+requirements.txt
+docker-compose.yml
+
+$ docker-compose run web django-admin startproject project .
+$ docker-compose up
+docker-compose up --build # to rebuild
+$ docker-compose down
+
+
+
+$ docker-compose run web python manage.py startapp polls
+
+$ docker-compose run web python manage.py createsuperuser
+
+$ docker-compose run web python manage.py migrate
+
+$ docker-compose run web python manage.py makemigrations polls
+
+$ docker-compose run web python manage.py migrate
+
+$ docker-compose run web python manage.py shell
+
+$ docker-compose run web python manage.py test polls
+
+references:
+    http://mmorejon.github.io/en/blog/start-django-project-with-docker/
+    https://medium.com/@shakibcse3842/django-rest-framework-polls-api-6416260f0a14
